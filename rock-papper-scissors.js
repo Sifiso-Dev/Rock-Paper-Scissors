@@ -15,26 +15,32 @@ function computerPlay () {
 
 computerSelection = computerPlay();
 
-let playerSelection = prompt("Please choose between Rock, Papper or Scissor: ");
+// Function for one round between user and computer
+
+let playerSelection = ("Please choose between Rock, Papper or Scissor: ");
 
 function playRound (playerSelection, computerSelection) {
+    let result = "";
+
     if (playerSelection.toLowerCase() == computerSelection.toLowerCase()) {
-        console.log("It's a tie!!!");
+        result = "It's a tie!!!";
     } else if (playerSelection.toLowerCase() == 'papper' && computerSelection.toLowerCase() == 'rock') {
-        console.log('You win! Papper beats Rock!');
+        result = 'You win! Papper beats Rock!';
     } else if (playerSelection.toLowerCase() == 'papper' && computerSelection.toLowerCase() == 'scissor') {
-        console.log('You lose! Scissor beats Papper!');
+        result = 'You lose! Scissor beats Papper!';
     } else if (playerSelection.toLowerCase() == 'rock' && computerSelection.toLowerCase() == 'papper') {
-        console.log('You lose! Papper beats Rock!');
+        result = 'You lose! Papper beats Rock!';
     } else if (playerSelection.toLowerCase() == 'rock' && computerSelection.toLowerCase() == 'scissor') {
-        console.log('You win! Rock beats scissor!');
+        result = 'You win! Rock beats scissor!';
     } else if (playerSelection.toLowerCase() == 'scissor' && computerSelection.toLowerCase() == 'rock') {
-        console.log('You lose! Rock beats scissor!');
+        result = 'You lose! Rock beats scissor!';
     } else if (playerSelection.toLowerCase() == 'scissor' && computerSelection.toLowerCase() == 'papper') {
-        console.log('You win! Scissor beats papper!');
+        result = 'You win! Scissor beats papper!';
     }
 }    
 
-console.log(playRound(playerSelection, computerSelection));
+function game () {
+
+}
 
 
