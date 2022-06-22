@@ -39,19 +39,20 @@ function playRound (playerSelection, computerSelection) {
 }    
 // A function to loop the playRound function 5 times
 
-function game (playerSelection, computerSelection) {
+function game () {
     let scorePlayer = 0;
     let scoreComp = 0;
     let result = "";
-
-    let userSelection = prompt("Please choose between Rock, Papper or Scissor: ");
-    let playerSelection = userSelection.toLocaleLowerCase();
-
-    let computerSelection = "";
-    computerSelection = computerPlay();
+    let score = "";
 
     for (let i = 0; i < 5; i++) {
-        playRound();
+
+        let userSelection = prompt("Please choose between Rock, Papper or Scissor: ");
+        let playerSelection = userSelection.toLocaleLowerCase();
+
+        let computerSelection = "";
+        computerSelection = computerPlay();
+        playRound(playerSelection, computerSelection);
 
         if (result == "It's a tie!!!") {
             scorePlayer += 0;
@@ -65,17 +66,17 @@ function game (playerSelection, computerSelection) {
         }
     }
 
-    return scoreComp;
-    return scorePlayer;
+    score = [scorePlayer, scoreComp];
+    return score;
 
 }
 
 game();
 
 // Displaying who's the winner
-if (scorePlayer == scoreComp) {
+if (score[0] == score[1]) {
     console.log("No one won! It's a tie!");
-} else if (scorePlayer > scoreComp) {
+} else if (score[0] > score[1]) {
     console.log('Congatulations! You won!');
 } else {
     console.log('You lost! The computer won!');
