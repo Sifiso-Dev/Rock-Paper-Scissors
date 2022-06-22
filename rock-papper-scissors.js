@@ -1,6 +1,5 @@
 // Function for computer to randomly generate rock, papper or scissor
 
-
 function computerPlay () {
     let randomNum = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
 
@@ -14,7 +13,6 @@ function computerPlay () {
 }
 
 // Function for one round between user and computer
-
 
 function playRound (playerSelection, computerSelection) {
     let result = "";
@@ -36,14 +34,14 @@ function playRound (playerSelection, computerSelection) {
     }
 
     return result;
-}    
+}
+
 // A function to loop the playRound function 5 times
 
 function game () {
     let scorePlayer = 0;
     let scoreComp = 0;
     let result = "";
-    let score = "";
 
     for (let i = 0; i < 5; i++) {
 
@@ -66,20 +64,20 @@ function game () {
         }
     }
 
-    score = [scorePlayer, scoreComp];
-    return score;
+    // Displaying who's the winner
+    if (scorePlayer == scoreComp) {
+        console.log("No one won! It's a tie!");
+    } else if (scorePlayer > scoreComp) {
+        console.log('Congatulations! You won!');
+    } else if (scorePlayer < scoreComp) {
+        console.log('You lost! The computer won!');
+}
+    
 
 }
 
 game();
 
-// Displaying who's the winner
-if (score[0] == score[1]) {
-    console.log("No one won! It's a tie!");
-} else if (score[0] > score[1]) {
-    console.log('Congatulations! You won!');
-} else {
-    console.log('You lost! The computer won!');
-}
+
 
 
