@@ -39,7 +39,7 @@ function playRound (playerSelection, computerSelection) {
 }
 playRound();
 
-console.log(result);
+
 // A function to loop the playRound function 5 times
 let scorePlayer = 0;
 let scoreComp = 0;
@@ -79,9 +79,9 @@ function game () {
 
 }
 
-//game();
+game();
 
-console.log(scoreComp);
+
 
 
 
