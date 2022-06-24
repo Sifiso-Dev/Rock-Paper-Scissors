@@ -12,10 +12,12 @@ function computerPlay () {
     }
 }
 
+
 // Function for one round between user and computer
+let result = "";
 
 function playRound (playerSelection, computerSelection) {
-    let result = "";
+   
 
     if (playerSelection == computerSelection) {
         result = "It's a tie!!!";
@@ -35,13 +37,14 @@ function playRound (playerSelection, computerSelection) {
 
     return result;
 }
+playRound();
 
+console.log(result);
 // A function to loop the playRound function 5 times
+let scorePlayer = 0;
+let scoreComp = 0;
 
 function game () {
-    let scorePlayer = 0;
-    let scoreComp = 0;
-    let result = "";
 
     for (let i = 0; i < 5; i++) {
 
@@ -76,7 +79,9 @@ function game () {
 
 }
 
-game();
+//game();
+
+console.log(scoreComp);
 
 
 
